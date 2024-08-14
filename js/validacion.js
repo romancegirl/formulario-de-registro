@@ -4,10 +4,16 @@
 // Se debe haber marcado el checkbox "Acepto los términos y condiciones del servicio.".
 
 document.getElementById("regBtn").addEventListener("click", function () {
+    
     let password1 = document.getElementById("password1").value;
-    if (password1.length < 6 ) {
+    let password2 = document.getElementById("password2").value;
+    
+    if (password1.length < 6  || password1!=password2) {
         showAlertError();
-    } showAlertSuccess(); 
+    } else {
+        showAlertSuccess();
+    } 
+
 }
 
 
