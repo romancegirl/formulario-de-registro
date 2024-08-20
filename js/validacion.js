@@ -7,8 +7,9 @@ document.getElementById("regBtn").addEventListener("click", function () {
 
     let password1 = document.getElementById("password1").value;
     let password2 = document.getElementById("password2").value;
+    let terminos = document.getElementById("terminos").checked;
 
-    if (password1.length < 6 || password1 != password2) {
+    if (password1.length < 6 || password1 != password2 || !terminos) {
         showAlertError();
     } else {
         showAlertSuccess();
